@@ -1,0 +1,15 @@
+import collections
+
+
+class Solution:
+    def subarraySum(self, nums: list[int], k: int) -> int:
+        count = 0
+        n = len(nums)
+        preSums = collections.defaultdict(int)
+        preSums[0] = 1
+        presum = 0
+        for i in range(n):
+            presum += nums[i]
+            count += preSums[presum - k]
+            preSums[presum] += 1
+        return count
