@@ -14,4 +14,3 @@ class Solution:
             score = sl[i] + sr[i + 1]
             ans = max(ans, score)
         return ans
-    #test
