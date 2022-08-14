@@ -12,7 +12,7 @@ class Solution:
             dp[i][0] = dp[i - 1][0] + 1
 
         '''
-        状态转移：
+        状态转移:
         增:dp[i][j] = dp[i][j - 1] + 1
         删:dp[i][j] = dp[i - 1][j] + 1
         改:dp[i][j] = dp[i - 1][j - 1] + 1
